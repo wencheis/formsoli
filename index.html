@@ -351,111 +351,45 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Kontakt oss</h2>
-                    <h3 class="section-subheading text-muted">Har du spørsmål til - eller er interessert i eit av våre prosjekt - ta gjerne kontakt.</h3>
+                    <h3 class="section-subheading text-muted">Har du spørsmål eller er interessert i eit av våre prosjekt - ta gjerne kontakt.</h3>
                 </div>
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- * * SB Forms Contact Form * *-->
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- This form is pre-integrated with SB Forms.-->
-                <!-- To make this form functional, sign up at-->
-                <!-- https://startbootstrap.com/solution/contact-forms-->
-                <!-- to get an API token!-->
-               
-				<form>
-  <div class="form-group">
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Fornavn *">
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlSelect1">Example select</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlSelect2">Example multiple select</label>
-    <select multiple class="form-control" id="exampleFormControlSelect2">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Example textarea</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
-</form>
-				
-				
-				
-				
-				<form> 
-					<div class= "form-group" action="https://formsubmit.co/wenche.snekkevik@solieigedom.no" method="POST">
-						
-						<!--honeypot--> 
-							<input type="text" name="_honey" style="display: none;">
+
+	 <form class="row g-3" action="https://formsubmit.co/wenche.snekkevik@solieigedom.no" method="POST">
+			<!--honeypot--> 
+			<input type="text" name="_honey" style="display: none;">
 			
-						<!--disable captcha-->
-							<input type="hidden" name="_captcha" value="false">
-                   
-						<div class="row align-items-stretch mb-5">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <!-- Name input-->
-								<label for="name">Ditt navn:</label>
-                                <input class="form-control" id="name" name="Navn" type="text" placeholder="Ditt Navn *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="name:required">Namn påkrevd.</div>
-                            </div>
-                            <div class="form-group">
-                                <!-- Email address input-->
-								<label for="email">E-post adresse:</label>
-                                <input class="form-control" id="email" name="E-post" type="email" placeholder="Din e-post *" data-sb-validations="required,email" />
-                                <div class="invalid-feedback" data-sb-feedback="email:required">E-post adresse påkrevd.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Ikkje gyldig e-post adresse.</div>
-                            </div>
-                            <div class="form-group mb-md-0">
-                                <!-- Phone number input-->
-								<label for="phone">Telefonnummer:</label>
-                                <input class="form-control" id="phone"navn="Telefon" type="tel" placeholder="Telefonnummer *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">Telefonnummer påkrevd</div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group form-group-textarea mb-md-0">
-                                <!-- Message input-->
-								<label for="message">Melding:</label>
-                                <textarea class="form-control" id="message" name="Melding" placeholder="Melding *" rows = "6" data-sb-validations="required"></textarea>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">Melding påkrevd.</div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Submit success message-->
-                    <!---->
-                    <!-- This is what your users will see when the form-->
-                    <!-- has successfully submitted-->
-                    <div class="d-none" id="submitSuccessMessage">
-                        <div class="text-center text-white mb-3">
-                            <div class="fw-bolder">Skjema sendt!</div>
-                        </div>
-                    </div>
-                    <!-- Submit error message-->
-                    <!---->
-                    <!-- This is what your users will see when there is-->
-                    <!-- an error submitting the form-->
-                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Feil i sending av skjema!</div></div>
-                    <!-- Submit Button-->
-                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit">Send Melding</button>
-						</div>
-                </form>
+			<!--disable captcha-->
+			<input type="hidden" name="_captcha" value="false">
+			
+			<input type="hidden" name="_next" value="https://wencheis.github.io/formsoli/success.html">
+			
+          <div class="col-md-6">
+            <label for="firstName" class="form-label">Fornavn</label>
+            <input type="text" placeholder="Fornavn *" class="form-control" name="Fornavn" id="firstName" required>
+          </div>
+          <div class="col-md-6">
+            <label for="lastName" class="form-label">Etternavn</label>
+            <input type="text" placeholder="Etternavn *" class="form-control" name="Etternavn" id="lastName" required>
+          </div>
+          <div class="col-md-8">
+            <label for="emailInfo" class="form-label">E-post</label>
+            <input type="email" placeholder="E-post adresse *" class="form-control" name="E-post" id="emailInfo" required>
+          </div>
+          <div class="col-md-4">
+            <label for="phoneNumber" class="form-label">Telefon</label>
+            <input type="text" placeholder="Telefonnummer *" class="form-control" name="Telefon" id="phoneNumber" placeholder="">
+          </div>
+          <div class="col-md-12">
+            <label for="comments" class="form-label">Melding til oss</label>
+            <textarea class="form-control" placeholder="Send oss innspill, spørsmål eller idéer *" name="Tilbakemelding&nbsp;og&nbsp;kommentarer" id="comments" rows="5" required></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-xl text text-uppercase">Send</button>
+			  
+          </div>
+        </form>
+				
+				
             </div>
         </section>
         <!-- Footer-->
